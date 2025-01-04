@@ -18,6 +18,10 @@
 </head>
 
 <body>
+    <button id="chatbot-toggler">
+        <span class="bi bi-chat-left "></span>
+        <span class="bi bi-bi bi-x"></span>
+    </button>
         <div class="chatbot-popup">
             <!-- chatbot Header -->
             <div class="chat-header">
@@ -29,10 +33,11 @@
                     </svg>
                     <h2 class="logo-text">Chatbot</h2>
                 </div>
-                <button id="close-chatbot" class="material-symbols-outlined">keyboard_arrow_down</button>
+                <button id="close-chatbot" class="bi bi-chevron-down"></button>
             </div>
         
             <!-- chatbot Body -->
+
             <div class="chat-body">
                 <div class="message bot-message ">
                     <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
@@ -50,12 +55,12 @@
                 <form action="#" class="chat-form">
                     <textarea placeholder="Message..." class="message-input" required ></textarea>
                     <div class="chat-controls">
-                        <button type="button" class="bi bi-emoji-smile"></button>
+                        <button type="button" id="emoji-picker" class="bi bi-emoji-smile"></button>
                         <div class="file-upload-wrapper">
                             <input type="file" accept="images/*" id="file-input" hidden>
                             <img src="#" >
                             <button type="button" id="file-upload" class="bi bi-paperclip"></button>
-                            <button type="button" id="file-cancel" class="bi bi-paperclip">close</button>
+                            <button type="button" id="file-cancel" class="bi bi-bi bi-x"></button>
                         </div>
                         <button type="submit" id="send-message" class="bi bi-arrow-up"></button>
                     </div>
@@ -63,6 +68,10 @@
         
             </div>
         </div>
+
+        <!-- Linking emoji mart script for emoji picker -->
+
+        <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
         
     <!--  JavaScript Libraries-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
